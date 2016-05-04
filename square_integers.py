@@ -5,12 +5,9 @@
 import math
 
 def find_square_integers(a, b):
-    squares = 0
-    for i in range(a, b+1):
-        if math.sqrt(i) == math.floor(math.sqrt(i)):
-            squares += 1
-
-    return squares
+    bottom_sqrt_int = math.ceil(math.sqrt(a))
+    top_sqrt_int = math.floor(math.sqrt(b))
+    return int(top_sqrt_int - bottom_sqrt_int + 1)
 
 def main():
     test_tuples = [(3, 9), (17, 24)]
